@@ -1,25 +1,24 @@
-public class GradeBookTest{
+public class GradeBook{
 
-    //main method begins program execution
-    public static void main(String[] args) {
+private String courseName; //course name for this GradeBook - instance variable
+    //all the methods in the class can manipulate this variable
 
-        //create Scanner to obtain input from command window
-        Scanner input = new Scanner(System.in);
+        public void setCourseName(String name){
 
-        //create a GradeBook object and assign it to myGradeBook
-        GradeBook myGradeBook = new GradeBook();
+            //method to store the coursename
+            courseName = name; //store the course name
+        } //end method setCourseName
 
-        //display initial value of courseName
-        System.out.printf("Initial course name is: %s\n\n", myGradeBook.getCourseName());
+        //method to get the course name
+        public String getCourseName()
+        {
+            return courseName;
 
-        //prompt for and read course name
-        System.out.println("Please enter the course name:");
-        String theName = input.nextLine(); //read a line of text
-        myGradeBook.setCourseName( theName ); //set the course name
-        System.out.println(); //prints a blank line
+        }//end method getCourseName();
 
-        //display welcome message after specifying course name
-        myGradeBook.displayMessage();
-    }//end main
-
-    }//end class GradeBookTest
+    //method to display a welcome message to the GradEBook User
+    public void displayMessage() {
+        //call getCourseName to get the name of the course;
+        System.out.printf("Welcome to the grade book for\n%s\n", getCourseName());
+    }//end method displayMessage
+}//end class GradeBook
