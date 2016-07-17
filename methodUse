@@ -1,0 +1,18 @@
+public class GradeBookTest{
+
+    public static void main(String[] args) {
+        //Create scanner to input the course name:
+        Scanner input = new Scanner(System.in);
+
+        //Create a GradeBook object and assign it to myGradeBook name
+        GradeBook myGradebook = new GradeBook();
+
+        //prompt for and input course name
+        System.out.println("Please enter the course name: ");
+        String nameOfCourse = input.nextLine(); //read name of course
+        System.out.println(); //outputs a blank line
+
+        //call myGradeBook's displayMessage method and pass nameOfCourse as an argument.
+        myGradebook.displayMessage(nameOfCourse);
+    }
+}
