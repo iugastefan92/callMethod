@@ -1,18 +1,27 @@
+import java.util.Scanner;
+
 public class GradeBookTest{
 
+    //main method begins program execution
     public static void main(String[] args) {
-        //Create scanner to input the course name:
+
+        //create Scanner to obtain input from command window
         Scanner input = new Scanner(System.in);
 
-        //Create a GradeBook object and assign it to myGradeBook name
-        GradeBook myGradebook = new GradeBook();
+        //create a GradeBook object and assign it to myGradeBook
+        GradeBook myGradeBook = new GradeBook();
 
-        //prompt for and input course name
-        System.out.println("Please enter the course name: ");
-        String nameOfCourse = input.nextLine(); //read name of course
-        System.out.println(); //outputs a blank line
+        //display initial value of courseName
+        System.out.printf("Initial course name is: %s\n\n", myGradeBook.getCourseName());
 
-        //call myGradeBook's displayMessage method and pass nameOfCourse as an argument.
-        myGradebook.displayMessage(nameOfCourse);
-    }
-}
+        //prompt for and read course name
+        System.out.println("Please enter the course name:");
+        String theName = input.nextLine(); //read a line of text
+        myGradeBook.setCourseName( theName ); //set the course name
+        System.out.println(); //prints a blank line
+
+        //display welcome message after specifying course name
+        myGradeBook.displayMessage();
+    }//end main
+
+    }//end class GradeBookTest
