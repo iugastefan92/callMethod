@@ -1,0 +1,20 @@
+//Using JOptionPane to display multiple lines in a dialog box
+
+import javax.swing.JOptionPane; //importing the JOptionPane class
+import java.util.Scanner;
+
+public class additionDialog{
+    public static void main(String[] args) {
+
+        String a = JOptionPane.showInputDialog("Enter the first integer: ");
+        String b = JOptionPane.showInputDialog("Enter the second integer: ");
+
+        int x = Integer.parseInt(a);
+        int y = Integer.parseInt(b);
+        int sum = x + y;
+
+        String result = String.format("The sum is %d", sum);
+
+        JOptionPane.showMessageDialog(null, result);
+    }
+}
